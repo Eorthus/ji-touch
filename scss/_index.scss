@@ -1,0 +1,170 @@
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header-logo{
+        width: 127px;
+    height: 31px;
+    }
+    .header-account-icon{
+        width: 21.5px;
+    height: 21.5px;
+    #menu {
+        display: none;
+      }
+      label {
+        display: block;
+      } 
+      .menu {
+        visibility: hidden;
+        background-color: #FFFFFF;
+      }
+      .open[type="checkbox"]:checked ~ .menu {
+        visibility: visible;
+        width: 150px;
+        height: 200px;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        z-index: 1;
+        border: 1px solid $font_color;
+      }
+      
+      .menu-cross {
+        display: block;
+        height: 15px;
+        width: 15px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        color:$font_color;
+      }
+      .close[type="checkbox"]:checked ~ .menu{
+        visibility: hidden;
+      }
+    }
+    .header-account-logs{
+        display: none;
+    }
+}
+.main-container{
+    margin-top:95px;
+    text-align: center;
+
+    .main-h1{
+        margin-bottom: 35px;
+        letter-spacing: 0.25em;
+    }
+    .main-p{
+        margin-bottom: 36px;
+        letter-spacing: 0.11em;
+    }
+    .main-form{
+        display: flex;
+    height: 45px;
+    justify-content: center;
+    .main-form-input{
+        max-width: 267px;
+        width: 100%;
+        border-radius: 0;
+        border: 1px solid gray;
+        padding-left: 10px;
+    }
+    .main-form-button{
+        max-width: 128px;
+    }
+    }
+}
+.footer-container{
+    padding-top:58px;
+    .footer-socials{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        .footer-socials-li{
+            margin-left: 16px;
+            margin-right: 16px;
+            width: 28px;
+            height: 28px;
+            &:first-child{
+                height: 23px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:640px){
+    .header-container{
+        .header-account-icon{
+            display: none;
+        }
+        .header-account-logs{
+            display: flex;
+            height: 42px;
+            .header-account-logs-login{
+                background: transparent;
+                border-radius: none;
+                border: none;
+                width: 54px;
+                margin-right: 52px;
+                &:active, &:hover{
+                    color: $second_color;
+                }
+            }
+            .header-account-logs-signup{
+                width: 116px;
+            }
+        }
+    }
+    .main-container{
+        margin-top: 214px;
+        .main-h1{
+            font-size: 60px;
+    margin-bottom: 40px;
+        }
+        .main-p{
+            font-size: 26px;
+    margin-bottom: 26px;
+        }
+        .main-form{
+            .main-form-input{
+                font-size: 16px;
+            }
+            .main-form-button{
+                max-width: 140px;
+            }
+        }
+    }
+    .footer-container{
+        padding-top: 162px;
+        .footer-socials{
+            justify-content: right;
+        }
+    }
+}
+@media screen and (min-width:1000px){
+ .main-container{
+    margin-top: 292px;
+     .main-h1{
+         font-size: 80px;
+         margin-bottom: 58px;
+     }
+ }
+ .footer-container{
+    padding-top: 196px;
+}
+}
+
+@media screen and (min-width:1440px){
+    .main-container{
+       margin-top: 292px;
+        .main-h1{
+            font-size: 80px;
+            margin-bottom: 58px;
+        }
+    }
+    .footer-container{
+       padding-top: 196px;
+   }
+   }
